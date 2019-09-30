@@ -1,4 +1,4 @@
-{% set version = '2.0-7' %}
+{% set version = '2.0-7.2' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SpatialExtremes_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SpatialExtremes/SpatialExtremes_{{ version }}.tar.gz
-  sha256: a0809720aabb9f2766a95522b4fcf545544e615c2efb9175b73e5decd80d10f8
+  sha256: 48f24eea1d3ce8fb3cb0d668bf453dfa6b14d559900606256eba93d87d4e182b
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,7 +45,7 @@ test:
 
 about:
   home: http://spatialextremes.r-forge.r-project.org/
-  license: GPL (>= 2)
+  license: GPL-2
   summary: 'Tools for the statistical modelling of spatial extremes using max-stable processes,
     copula or Bayesian hierarchical models. More precisely, this package allows (conditional)
     simulations from various parametric max-stable models, analysis of the extremal
@@ -57,15 +57,16 @@ about:
     handled through an (efficient) Gibbs sampler. Some key references: Davison et al.
     (2012) <doi:10.1214/11-STS376>, Padoan et al. (2010) <doi:10.1198/jasa.2009.tm08577>,
     Dombry et al. (2013) <doi:10.1093/biomet/ass067>.'
-  license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_family: GPL2
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
 
 # Package: SpatialExtremes
-# Version: 2.0-7
+# Version: 2.0-7.2
 # Date: 2018-07-02
 # Title: Modelling Spatial Extremes
 # Authors@R: c(person("Mathieu", "Ribatet", role = c("aut", "cre"), email = "mathieu.ribatet@umontpellier.fr"), person("Richard", "Singleton", role = "ctb"), person("R Core team", role = "ctb"))
@@ -75,8 +76,8 @@ extra:
 # License: GPL (>= 2)
 # URL: http://spatialextremes.r-forge.r-project.org/
 # NeedsCompilation: yes
-# Packaged: 2018-07-02 11:49:36 UTC; Mathieu
+# Packaged: 2019-08-02 14:41:39 UTC; ripley
 # Author: Mathieu Ribatet [aut, cre], Richard Singleton [ctb], R Core team [ctb]
 # Maintainer: Mathieu Ribatet <mathieu.ribatet@umontpellier.fr>
 # Repository: CRAN
-# Date/Publication: 2018-07-02 12:30:02 UTC
+# Date/Publication: 2019-08-02 15:08:41 UTC
