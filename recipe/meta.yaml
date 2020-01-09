@@ -1,4 +1,4 @@
-{% set version = '2.0-7.2' %}
+{% set version = "2.0-7.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SpatialExtremes_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SpatialExtremes/SpatialExtremes_{{ version }}.tar.gz
-  sha256: 48f24eea1d3ce8fb3cb0d668bf453dfa6b14d559900606256eba93d87d4e182b
+  sha256: 1d87b76a83e93e27fd99c4ca96e4bf8e1c5877fd00f177ede48a96653f19c674
 
 build:
   merge_build_host: True  # [win]
