@@ -3,7 +3,7 @@ About r-spatialextremes
 
 Home: http://spatialextremes.r-forge.r-project.org/
 
-Package license: GPL-2
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-spatialextremes-feedstock/blob/main/LICENSE.txt)
 
